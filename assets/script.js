@@ -8,7 +8,7 @@ var clockTimer;
 let clockRunning = false;
 
 let studyInterval = 1500;
-let shortBreakInterval = 1;
+let shortBreakInterval = 300;
 let longBreakInterval = 900;
 
 let timeLeft = 1500;
