@@ -8,16 +8,19 @@ var clockTimer;
 let clockRunning = false;
 
 let studyInterval = 1500;
-let shortBreakInterval = 300;
+let shortBreakInterval = 1;
 let longBreakInterval = 900;
 
 let timeLeft = 1500;
+var alarm = new Audio('assets/sounds/dorostudy-alarm.mp3');
 
 const toggleTimer = (resetTime) => {
     if (resetTime > -1) {
         clearInterval(clockTimer);
         clockRunning = false;
         timeLeft = resetTime;
+        alarm.pause();
+        alarm.currentTime = 0;
         displayTime();
     } else {
         if (clockRunning) {
@@ -29,6 +32,7 @@ const toggleTimer = (resetTime) => {
             clockTimer = setInterval(() => {
                 if (timeLeft == 0) {
                     clearInterval(clockTimer);
+                    alarm.play();
                 } else {
                     timeLeft--;
                 }
@@ -54,6 +58,10 @@ document.addEventListener('keyup', (e) => {
         // Stop the space bar from toggling the button (does this by default).
         e.preventDefault();
         toggleTimer(-1);
+        if (timeLeft == 0) {
+            alarm.pause();
+            alarm.currentTime = 0;
+        }
     }
 });
 
