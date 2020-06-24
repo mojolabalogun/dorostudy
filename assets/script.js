@@ -65,6 +65,14 @@ document.addEventListener('keyup', (e) => {
     }
 });
 
+timer.addEventListener('click', (e) => {
+    toggleTimer(-1);
+    if (timeLeft == 0) {
+        alarm.pause();
+        alarm.currentTime = 0;
+    }
+});
+
 // Start study time interval (25 minutes).
 start.addEventListener('click', (e) => {
     var current = document.getElementsByClassName("active");

@@ -1,8 +1,9 @@
 body, html {
-    height: 99%;
+    height: 90vh;
     background: #FFFFFF;
     margin: 0;
     padding: 0;
+    padding-bottom: 51px;
 }
 
 #main {
@@ -12,6 +13,7 @@ body, html {
     height: 100%;
     text-align: center;
     bottom: 0;
+    padding-bottom: 51px;
 }
 
 #app {
