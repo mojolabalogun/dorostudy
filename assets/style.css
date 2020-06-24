@@ -109,7 +109,7 @@ body, html {
     font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 200;
     font-size: 21px;
-    line-height: 44px;
+    line-height: 21px;
     text-align: center;
     color: #000000;
     clear: both;
@@ -119,6 +119,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 50px;
+    vertical-align: text-bottom;
 }
 
 #footer a {
@@ -128,4 +129,10 @@ body, html {
 
 #footer a:hover {
     color: #C23616;
+}
+
+#footer img {
+    height: 20px;
+    width: 20px;
+    bottom: 0;
 }
